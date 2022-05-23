@@ -8,9 +8,13 @@ static create (id,username,name){
 }
 
 static getInfo (user){
-    const list = [user.id,user.username,user.name,"Sin bio"]
-    return list
+  return Object.values(user)
 }
+
+static updateBio(user, bio){
+    user.setBio = bio
+  }
+  
 static updateUserUsername(user,newUser){
     user.username=newUser
     
